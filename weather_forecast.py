@@ -23,4 +23,20 @@ def get_weather_forecast(zip_code):
         # Track unique dates to avoid duplicate entries
         unique_dates = set()
 
+        # Iterate through the forecast list
+        for forecast in forecast_list:
+            # Extract date and format it
+            forecast_date = datetime.utcfromtimestamp(forecast['dt']).strftime('%m/%d/%Y')
+
+            # Skip if date is already processed
+            if forecast_date in unique_dates: continue
+            unique_dates.add(forecast_date)
+            
+            # Convert temperatures to Fahrenheit
+            temp_max, temp_min = map(kelvin_to_fahrenheit, [forecast['main']['temp_max'], forecast['main']['temp_min']])
+            
+            # Get precipitation, default to 0 if not available
+            precipitation = forecast['rain']['3h'] if 'rain' in forecast and 'rain' in forecast else 0
+
+            
 
