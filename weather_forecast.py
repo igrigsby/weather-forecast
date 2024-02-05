@@ -38,5 +38,7 @@ def get_weather_forecast(zip_code):
             # Get precipitation, default to 0 if not available
             precipitation = forecast['rain']['3h'] if 'rain' in forecast and 'rain' in forecast else 0
 
+            # Displays forecast information
+            print(f"# {forecast_date}   {temp_max:.2f}/{temp_min:.2f}                  {precipitation:.2f}")
             
 
