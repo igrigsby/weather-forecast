@@ -40,5 +40,15 @@ def get_weather_forecast(zip_code):
 
             # Displays forecast information
             print(f"# {forecast_date}   {temp_max:.2f}/{temp_min:.2f}                  {precipitation:.2f}")
+
+        # Ask if the user wants to search for another zip code
+        another_search = input("Do you want to search for another zip code? (yes/no): ").lower()
+        if another_search == 'yes':
+            get_weather_forecast(input("Enter the new zip code: "))
+        else:
+            print("Thank you for searching for your 5-day weather! Hope you come back for more information.")
+
+    except requests.exceptions.RequestException as err:
+        print(f"Error: {err}")
             
 
