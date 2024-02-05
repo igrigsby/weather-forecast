@@ -17,3 +17,6 @@ This Python script provides a 5-day weather forecast based on user input (zip co
 # 02/09/2024   58.57/47.68                  0.00
 # 02/10/2024   61.84/49.46                  0.00
 ~~~
+
+## Contributing
+Feel free to contribute, report issues, or suggest improvements. Pull requests are welcome!
