@@ -50,5 +50,6 @@ def get_weather_forecast(zip_code):
 
     except requests.exceptions.RequestException as err:
         print(f"Error: {err}")
-            
+
+get_weather_forecast(input("Enter the zip code: "))
 
