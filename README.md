@@ -4,7 +4,9 @@ This Python script provides a 5-day weather forecast based on user input (zip co
 
 ### Features
 **Weather Forecast Retrieval** : Fetches a 5-day weather forecast for a specified zip code using the OpenWeatherMap API.
+
 **Temperature Conversion** : Converts temperatures from Kelvin to Fahrenheit for better readability.
+
 **Interactive User Interface** : Allows users to input a zip code and displays the weather forecast interactively. Users can choose to search for another zip code or exit the application.
 
 ## Sample Output
